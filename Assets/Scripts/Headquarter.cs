@@ -16,7 +16,7 @@ public class Headquarter : MonoBehaviour {
     [SerializeField] int bulletsFired = 0;
     [SerializeField] int bulletsHit = 0;
     [SerializeField] int score = 0;
-    [SerializeField] Canon[] canonList = null;
+    [SerializeField] Cannon[] canonList = null;
     [SerializeField] int canonIndex = 0;
     public int Score { get { return score; } set { score = value; scoreText.text = "점수: " + score.ToString(); } }
     public int Hp { get { return hp; } set { hp = value; hpText.text = "체력: " + hp.ToString(); } }
@@ -25,7 +25,7 @@ public class Headquarter : MonoBehaviour {
 
     private void UpdateCanon() {
         int i = 0;
-        foreach (Canon c in canonList) {
+        foreach (Cannon c in canonList) {
             c.gameObject.SetActive(i == canonIndex);
             i++;
         }

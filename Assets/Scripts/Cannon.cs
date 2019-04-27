@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Canon : MonoBehaviour {
+public class Cannon : MonoBehaviour {
     [SerializeField] Transform[] drumTipList = null;
     [SerializeField] Transform[] drumList = null;
     List<Vector3> drumInitialLocalPosition = new List<Vector3>();
